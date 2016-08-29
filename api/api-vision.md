@@ -24,6 +24,7 @@ Bearer cd04d8cafcc8b0bc0d7e47a2fdc3155f783cdff10f36f70e7793947e2fcfxxx
 img='data:image/jpeg:base64,xxxxxxxxxx'
 ```
 
+* [图像请求例子](/example/vision_request_example/)
 
 
 ## 1.人脸识别
