@@ -21,7 +21,7 @@ Headers 内需填上token的 Bearer 认证信息，例如：Bearer cd04d8cafcc8b
 
 ### request：明天我们一起去颐和园划船吧。
 ### response:
-'''javascript
+'
 {
   "wordsList": [
     "明天",
@@ -34,7 +34,7 @@ Headers 内需填上token的 Bearer 认证信息，例如：Bearer cd04d8cafcc8b
     "。"
   ]
 }
-'''
+'
 
 ## 2.搜索引擎分词
 ### 请求路径 searchCut/
