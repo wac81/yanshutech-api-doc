@@ -4,13 +4,13 @@
 ***所有的接口访问全部在/api/ 之下，以下所有接口请自动补全/api/。比如：wordFlag, 调用完整地址应该是http://host/api/wordFlag***
 
 
-## 0.to all text api
+## 0.to all vision api
 如何请求：
 ***大多数请求只支持post，get方式请求会明文告知，如无注明默认post请求***
 例如：精确分词请求
-posturl = http://host/api/exactCut
-将在body内写入参数nl："请求的字符串"
-装载后向 posturl 发送请求。
+```
+http post http://host/api/FaceRecognition Authorization:'Bearer access_token'
+```
 
 Headers 内需填上token的 Bearer 认证信息，例如：
 ```
