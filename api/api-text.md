@@ -9,7 +9,7 @@
 ***大多数请求只支持post，get方式请求会明文告知，如无注明默认post请求***
 例如：精确分词请求
 ```
-posturl = http://acnlp.com/api/exactCut
+http post http://host/api/exactCut Authorization:'Bearer access_token'
 ```
 将在body内写入参数nl："请求的字符串"
 装载后向 posturl 发送请求。
@@ -23,7 +23,6 @@ Bearer cd04d8cafcc8b0bc0d7e47a2fdc3155f783cdff10f36f70e7793947e2fcfxxx
 
 ## 1.精确分词
 ### 请求路径 exactCut/
-
 ### request：明天我们一起去颐和园划船吧。
 ### response:
 ```javascript
