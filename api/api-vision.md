@@ -51,12 +51,12 @@ img='data:image/jpeg:base64,xxxxxxxxxx'
 
 
 ## 2.图片分类
-### 请求路径 imageClassification/
+### 请求路径 ImageClassification/
 ### request：post body
 ### response:
 ```javascript
 {
-  "imageClassification": {
+  "ImageClassification": {
     "terrorist": 0.8655983805656433,        //恐怖分子，权重0.8655983805656433
     "other": 0.13433212041854858,
     "political": 0.00006675633630948141,
