@@ -25,7 +25,7 @@ img='data:image/jpeg:base64,xxxxxxxxxx'
 ### 请求路径 FaceRecognition/
 ### request：post body
 ### response:
-'''javascript
+```javascript
 {
   "FaceRecognition": {
     "face0": [      //识别到第一张脸

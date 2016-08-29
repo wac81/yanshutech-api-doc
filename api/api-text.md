@@ -21,7 +21,7 @@ Headers 内需填上token的 Bearer 认证信息，例如：Bearer cd04d8cafcc8b
 
 ### request：明天我们一起去颐和园划船吧。
 ### response:
-'''
+```javascript
 {
   "wordsList": [
     "明天",
@@ -34,13 +34,13 @@ Headers 内需填上token的 Bearer 认证信息，例如：Bearer cd04d8cafcc8b
     "。"
   ]
 }
-'''
+```
 
 ## 2.搜索引擎分词
 ### 请求路径 searchCut/
 ### request：明天我们一起去颐和园划船吧。
 ### response:
-'''javascript
+```javascript
 {
   "wordsList": [
     "明天",
@@ -54,13 +54,13 @@ Headers 内需填上token的 Bearer 认证信息，例如：Bearer cd04d8cafcc8b
     "。"
   ]
 }
-'''
+```
 
 ## 3.关键词提取
 ### 请求路径 kwAnalyse/
 ### request：明天我们一起去颐和园划船吧。
 ### response:
-'''javascript
+```javascript
 {
   "rankList": [
     {
@@ -85,13 +85,13 @@ Headers 内需填上token的 Bearer 认证信息，例如：Bearer cd04d8cafcc8b
     }
   ]
 }
-'''
+```
 
 ## 4.词性标记
 ### 请求路径 wordFlag/
 ### request：明天我们一起去颐和园划船吧。
 ### response:
-'''javascript
+```javascript
 {
   "flagsList": [
     {
@@ -128,27 +128,27 @@ Headers 内需填上token的 Bearer 认证信息，例如：Bearer cd04d8cafcc8b
     }
   ]
 }
-'''
+```
 
 
 ## 5.情感分析
 ### 请求路径 sentiments/
 ### request：明天我们一起去颐和园划船吧。
 ### response:
-'''javascript
+```javascript
 {
   "sentiments": [
     "0.5",                //基于词性的情感分析
     "0.0816062769018"     //基于机器学习多情感分析，需要模型支撑，模型可以定制
   ]
 }
-'''
+```
 
 ## 6.相似性推荐
 ### 请求路径 similar/
 ### request：明天我们一起去颐和园划船吧。
 ### response:
-'''javascript
+```javascript
 {
   "similarNO": [
     "3487019103051670372_Vol03 你是我心中的秘密",
@@ -171,7 +171,7 @@ Headers 内需填上token的 Bearer 认证信息，例如：Bearer cd04d8cafcc8b
     "0.693148"
   ]
 }
-'''
+```
 similarNO ：返回文章的序号和名称，按similarQZ排序
 similarQZ ：相似度分值，范围[0,1]
 
@@ -180,7 +180,7 @@ similarQZ ：相似度分值，范围[0,1]
 ### 请求路径 abstract/
 ### request：一篇文章
 ### response:
-'''javascript
+```javascript
 {
   "text": [
     "特别是北京这样高校云集的城市，如果能够将部分高校道路向社会开放，将校园道路与城市道路衔接，这对完善城市路网体系，缓解城市交通拥堵有积极作用。",
@@ -194,7 +194,7 @@ similarQZ ：相似度分值，范围[0,1]
     "下午，北京市规划委相关负责人对此做出了澄清，并指出本次规划是为推进高校周边区域路网管控，根本不涉及高校拆围墙成开放式街区一事。"
   ]
 }
-'''
+```
 返回重要句子的列表
 
 
@@ -204,25 +204,25 @@ similarQZ ：相似度分值，范围[0,1]
 ### 请求路径 atc/文章id标题
 ### request:atc/7077233320873046578_交通拥堵向小城市蔓延 专家称规划法治化不足
 ### response:
-'''javascript
+```javascript
 {
   "data": "22世界无车日一天不少城市实施区域限行城市发起绿色出行倡议活动相信一天开展无车日活..."
 }
-'''
+```
 
 
 ## 9.自动文章分类
 ### 请求路径 classification/
 ### request：一篇文章
 ### response:
-'''javascript
+```javascript
 {
   "classification": [
     "教育",
     "中小学教育"
   ]
 }
-'''
+```
 返回一个列表格式多分类标签，第一个tag‘教育’是第一层分类结果，‘中小学教育’是第二层分类结果，最多有三层分类。该项可以定制。
 
 

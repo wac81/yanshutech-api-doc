@@ -1,4 +1,4 @@
-'''javascript
+```javascript
 /**
  * Created by wac on 16-8-16.
  */
@@ -31,4 +31,4 @@
             // var str = JSON.stringify(jsonData, undefined, 2);
         }
     };
-'''
+```
