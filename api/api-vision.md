@@ -49,7 +49,15 @@ img='data:image/jpeg:base64,xxxxxxxxxx'
   }
 }
 ```
-
+```javascript
+    "face0": [      //识别到第一张脸
+      280,         //x1
+      122,          //y1
+      137,          //width
+      137           //height
+    ],
+```
+x1,y1 是第一个点的坐标，width是宽度，height是高度值
 
 ## 2.图片分类
 ### 请求路径 ImageClassification/
@@ -100,3 +108,12 @@ img='data:image/jpeg:base64,xxxxxxxxxx'
   ]
 }
 ```
+```javascript
+          "bbox": [     //物体位置
+            115.32887268066406,     //x1
+            29.278263092041016,     //y1
+            158.86488342285156,     //x2
+            48.8322639465332        //y2
+          ],
+```
+x1,y1 是第一个点的坐标，x2,y2是第二个点的坐标
