@@ -31,7 +31,7 @@ Bearer cd04d8cafcc8b0bc0d7e47a2fdc3155f783cdff10f36f70e7793947e2fcfxxx
 
 
 
-## 2.创建一个机器人
+## 2.与机器人对话
 ### 请求路径 yoyoBot/
 ### request nl：{"yoyoBot": "接口1的返回值","msg":"你好" }  msg为人发起的对话
 ### response:
