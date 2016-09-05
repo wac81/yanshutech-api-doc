@@ -21,7 +21,7 @@ Bearer cd04d8cafcc8b0bc0d7e47a2fdc3155f783cdff10f36f70e7793947e2fcfxxx
 
 ## 1.创建一个机器人
 ### 请求路径 yoyoBot/
-### request nl：客户端IP地址,例如：103.37.158.72，用于用户地理信息位置定位，便于歌曲推荐、地点推荐、购票等功能的使用
+### request nl：客户端IP地址,例如：103.37.158.72，用户地理信息位置定位，用于歌曲推荐、地点推荐、购票等功能的使用
 ### response:
 ```javascript
 {
