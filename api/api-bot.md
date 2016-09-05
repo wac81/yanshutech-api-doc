@@ -18,3 +18,26 @@ Headers 内需填上token的 Bearer 认证信息，例如：
 ```
 Bearer cd04d8cafcc8b0bc0d7e47a2fdc3155f783cdff10f36f70e7793947e2fcfxxx
 ```
+
+## 1.创建一个机器人
+### 请求路径 yoyoBot/
+### request nl：客户端IP地址,例如：114.23.43.23，用于用户地理信息位置定位，便于歌曲推荐、地点推荐、购票等功能的使用
+### response:
+```javascript
+{
+  "yoyoBot": "机器人的句柄，用于聊天时传入"
+}
+```
+
+
+
+## 2.创建一个机器人
+### 请求路径 yoyoBot/
+### request nl：{"yoyoBot": "接口1的返回值","msg":"你好" }  msg为人发起的对话
+### response:
+```javascript
+{
+  "responseMsg": "您好, 很高兴为您服务."
+}
+```
+responseMsg：机器人返回的句子
