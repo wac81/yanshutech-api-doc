@@ -27,8 +27,7 @@ password:your password
 }
 ```
 ### request example
-[get access_token]: https://github.com/wac81/yanshutech-api-doc/blob/master/images/get_access_token_from_password.png "get access_token"
-![](https://raw.githubusercontent.com/wac81/yanshutech-api-doc/master/images/get_access_token_from_password.png)
+![get_access_token_from_password](https://raw.githubusercontent.com/wac81/yanshutech-api-doc/master/images/get_access_token_from_password.png)
 
 ## 2.通过refresh_token 交换access_token
 ### http example:
@@ -54,5 +53,4 @@ refresh_token:64767236d6ac54433f092d3561043ee54a5a8a849a9b35a6c445e902e457b6eb
 }
 ```
 ### request example
-[get access_token]: https://github.com/wac81/yanshutech-api-doc/blob/master/images/get_access_token_from_refresh_token.png "get access_token"
-![](https://raw.githubusercontent.com/wac81/yanshutech-api-doc/master/images/get_access_token_from_refresh_token.png)
+![get_access_token_from_refresh_token](https://raw.githubusercontent.com/wac81/yanshutech-api-doc/master/images/get_access_token_from_refresh_token.png)
