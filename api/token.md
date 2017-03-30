@@ -57,6 +57,7 @@ refresh_token:64767236d6ac54433f092d3561043ee54a5a8a849a9b35a6c445e902e457b6eb
 
 ## 3.使用access_token 访问服务
 ### http example（这里以词性为例）:
+```javascript
 POST /api/wordFlag HTTP/1.1
 Host: acnlp.com
 Authorization: Bearer 2bcc599c37a86af603f27f79acb8260e53d97bd15d934a448ef2c1d0bfd3f6da
@@ -65,4 +66,5 @@ Postman-Token: 228091be-8973-ef3d-9a8e-251e370b64fd
 Content-Type: application/x-www-form-urlencoded
 
 nl=填入文本
+```
 ![use_access_token](https://raw.githubusercontent.com/wac81/yanshutech-api-doc/master/images/use_access_token.png)
