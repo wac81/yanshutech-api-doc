@@ -6,3 +6,5 @@
 ##  [图像API](/api/api-vision/)
 ##  [对话API](/api/api-bot/)
 ##  [图像请求例子](/example/vision_request_example/)
+##  [JAVA请求例子](/example/java_request_example/)
+##  [PYTHON请求例子](/example/python_request_example/)
