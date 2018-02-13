@@ -6,12 +6,14 @@ import json
 import time
 import base64
 import cPickle
+import urllib2
+import urllib
 
 
-my_client_id = "your_client_id"
-my_client_secret = "your_client_secret"
-my_email = "email"
-my_pwd = "password"
+my_client_id = "69413b5e89e09d62db4625d0453f522f"
+my_client_secret = "b3036dcd185ee47a730637c3c6ab007c"
+my_email = "402955987@qq.com"
+my_pwd = "woleigequ"
 host = "http://acnlp.com/api/"
 my_ip = "103.37.158.72"
 
@@ -25,7 +27,6 @@ def timing(func):
         print("> %.3fs taken for {%s}" % (time.time() - tic, func.__name__))
         return back
     return wrapper
-
 
 
 #############################################
@@ -150,17 +151,26 @@ def chat_with_bot(msg="推荐电影", yoyoBot_str=None, my_access_token=None):
     """
     print("==============")
     chat_url = host + "yoyoBotChat"
+
     headers = {
         "Authorization": "Bearer " + my_access_token,
         "Cache-Control": "no-cache",
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
     }
+    nl_body = {
+        "yoyoBot": yoyoBot_str,
+        "msg": msg
+    }
+
+    # 注意：application/x-www-form-urlencoded 就是
+    # k1=v1&k2=v2...这样的key=>str_val结构, 所以不适合多级字典form数据
+    # 所以要把内层字典结构编程json字符串
     payload = {
-        "nl": {
-            "yoyoBot": yoyoBot_str,
-            "msg": msg
-        }
+        "nl": json.dumps(nl_body)
     }
+
+    print("[PayLoad]", payload)
+    print("[URL]", chat_url)
     res = requests.post(
         url=chat_url,
         data=payload,
@@ -272,7 +282,12 @@ def post_sentiments(my_access_token):
         "Content-Type": "application/x-www-form-urlencoded"
     }
     payload = {
-        "nl": "明天我们一起去颐和园划船吧。"
+        # "nl": "明天我们一起去颐和园划船吧。"
+        # "nl": "我们要打败恐怖主义"
+        # "nl": "我喜欢喝安佳牛奶"
+        # "nl": "我讨厌安佳牛奶" * 200
+        # "nl": "你是个大傻逼" * 200
+        "nl": "本期话题主持人：左蓉达 本报记者徐伯元回顾2014年的经济故事，畅想2015年的经济生活。在跨年之际，《大东北》发起了“总结·展望”话题，网友们纷纷留言讨论，有的谈对东北“大经济”的期盼，有的讲对身边“小经济”的愿望。无论如何，大家都希望东北经济能讲好新一年的故事。希望大东北的“大经济”更活跃@柳河本人：东北一些知名企业采取了“走出去”的发展策略，同时也采取了区域经济联动的方式，不但能分享到他处的蛋糕，也在资源共享的同时增加了竞争的资本。对东北经济的展望是，希望发挥东北老工业基地的优势，通过不同区域的资源往来，加大技术合作，使东北经济相互借力飞翔。左蓉达叫左左更亲切：希望东北经济的区域联系和包容性更强，区域内的资本流动更活跃，既能带动资源整合和经济发展，也为人力、物力、财力的自由流通创造便利条件。也希望东北经济日益加强合作，可为更多人带来创业机遇，也能为更多高校毕业生创造就业岗位，让城市更加充满竞争和活力，让年轻人能更快安家落户。期望东北人的“小经济”更踏实@木子开花02033：2014年对我影响最大的是不断出台的房改新政，在经历了新政带来的心理上的忽起忽落之后，我的收获是平和。面对市场供求关系、大经济环境及金融政策的变化，客观、平和看待才是最好的态度。@刁蛮天慈：每个人都希望自己能拥有一份理想的、收入好的工作，可是想法和现实经常有差距。我愿意兢兢业业完成每一天的工作，但美中不足的是单位不给“五险一金”待遇，又缺少选择单位的空间。作为打工者，深切期盼有更多法律维权的渠道，维护劳动者的权益。@拎包走世界：2014马路上的车越来越多，路越来越堵，真愁人！希望2015年有关部门能加大力度，多建一些立体停车场，让停车更方便，让车主们少些罚单，让路上多些畅通！东北，你能带个头不？原文连接：http://szb.dlxww.com/dlrb/html/2015-01/08/content_1107532.htm?div=-1免责声明：慧科和该网页的作者无关，不对其内容负责。该快照或内容仅为索引不代表被搜索网站的即时页面，需要查看完整资讯请点击链结。"
     }
     res = requests.post(
         url=chat_url,
@@ -463,7 +478,8 @@ if __name__ == "__main__":
     post_classification(my_access_token=access_token)
 
     # test img
-    # post_FaceRecognition(my_access_token=access_token)
+    post_FaceRecognition(my_access_token=access_token)
     post_ImageClassification(my_access_token=access_token)
     post_ObjectRecognition(my_access_token=access_token)
+
 ```
